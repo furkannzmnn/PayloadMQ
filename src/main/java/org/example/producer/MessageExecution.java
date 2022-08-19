@@ -19,7 +19,6 @@ public final class MessageExecution {
                  throw new RuntimeException(e);
              }
              BROKER_CLUSTER.send(payload);
-             throw new RuntimeException("noldu");
          }).join();
     }
 }
