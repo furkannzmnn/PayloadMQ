@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="retry pattern added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ListenerInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/annotation/PayloadListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-features/Features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/new-features/Features.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" afterDir="false" />
-    </list>
+    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="PayloadListener annotation added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660993016658</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="PayloadListener annotation added">
+      <created>1661000240715</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661000240715</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +196,7 @@
     <MESSAGE value="FEATURE FİLES ADDED" />
     <MESSAGE value="message data store system design" />
     <MESSAGE value="retry pattern added" />
-    <option name="LAST_COMMIT_MESSAGE" value="retry pattern added" />
+    <MESSAGE value="PayloadListener annotation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="PayloadListener annotation added" />
   </component>
 </project>
