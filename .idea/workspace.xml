@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="lock">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Loggers.java" afterDir="false" />
+    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="toic and payload seperation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-features/Features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/new-features/Features.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RetryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RetryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/broker/BrokerCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/broker/BrokerCluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +135,7 @@
       <updated>1660935383845</updated>
       <workItem from="1660935385316" duration="11788000" />
       <workItem from="1660998656595" duration="1368000" />
-      <workItem from="1661016904709" duration="1944000" />
+      <workItem from="1661016904709" duration="4015000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1660943349583</created>
@@ -192,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661017091960</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="toic and payload seperation">
+      <created>1661019015754</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661019015754</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +217,8 @@
     <MESSAGE value="retry pattern added" />
     <MESSAGE value="PayloadListener annotation added" />
     <MESSAGE value="lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="lock" />
+    <MESSAGE value="toic and payload seperation" />
+    <option name="LAST_COMMIT_MESSAGE" value="toic and payload seperation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

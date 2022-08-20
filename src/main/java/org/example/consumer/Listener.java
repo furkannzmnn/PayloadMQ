@@ -19,7 +19,7 @@ public class Listener extends BrokerCluster {
                 // invoke method
                 if (message != null) {
                     ListenerInvoker.invoke(message);
-                    CompletableFuture.runAsync(() -> dataStore.storeData(new Payload(message, "topic", "method")))
+                    CompletableFuture.runAsync(() -> dataStore.storeData(new Payload(message, "topic")))
                             .whenCompleteAsync((v, e) -> {
                                 if (e != null) {
                                     logger( this.getClass().getName(), e.getMessage());

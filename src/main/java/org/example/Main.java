@@ -19,14 +19,14 @@ public class Main {
     public static void main(String[] args) {
         PayloadSender sender = new PayloadSender();
         String basicJson = "{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}";
-        Payload payload = new Payload(basicJson, "ops", new Main().getMethod());
+        Payload payload = new Payload(basicJson, "ops");
 
         CompletableFuture.runAsync(() -> new ScheduleMessageStore().scheduleStore());
         execute(payload, sender);
     }
 
     private static void execute(Payload payload, PayloadSender sender) {
-        sender.sendAsync(payload.getTopic(), payload.getPayload(), payload.getMethod())
+        sender.sendAsync(payload.getTopic(), payload.getPayload())
                 .handle((result, ex) -> {
                     if (ex != null) {
                         System.out.println("an error occurred: "+ ex.getMessage());
@@ -45,13 +45,6 @@ public class Main {
             System.out.println("received: " + payload1.getPayload());
         } catch (JsonProcessingException e) {
             System.out.println(e.getMessage());
-        }
-    }
-
-    @PayloadListener
-    public void okki(String payload) {
-        for (int i = 0; i < 100; i++) {
-            System.out.println("test topic");
         }
     }
 }
