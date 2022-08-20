@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="FEATURE FİLES ADDED">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MessageDataStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MessageStoreExecution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" afterDir="false" />
+    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="message data store system design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/broker/BrokerCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/broker/BrokerCluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/producer/MessageExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/producer/MessageExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/producer/PayloadSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/producer/PayloadSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +24,37 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/PAYLOAD-001" />
+                    <option name="lastUsedInstant" value="1660988135" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1660988134" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -85,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660935383845</updated>
-      <workItem from="1660935385316" duration="8888000" />
+      <workItem from="1660935385316" duration="11788000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1660943349583</created>
@@ -108,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660943694723</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="message data store system design">
+      <created>1660988147778</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660988147778</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,28 +158,27 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="FEATURE FİLES ADDED" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEATURE FİLES ADDED" />
+    <MESSAGE value="message data store system design" />
+    <option name="LAST_COMMIT_MESSAGE" value="message data store system design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java</url>
+          <line>10</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java</url>
           <line>11</line>
           <properties>
-            <option name="lambda-ordinal" value="-1" />
+            <option name="lambda-ordinal" value="1" />
           </properties>
-          <option name="timeStamp" value="20" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
