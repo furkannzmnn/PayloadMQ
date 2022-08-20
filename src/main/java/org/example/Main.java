@@ -47,4 +47,11 @@ public class Main {
             System.out.println(e.getMessage());
         }
     }
+
+    @PayloadListener
+    public void okki(String payload) {
+        for (int i = 0; i < 100; i++) {
+            System.out.println("test topic");
+        }
+    }
 }

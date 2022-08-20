@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="PayloadListener annotation added" />
+    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="lock">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Loggers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-features/Features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/new-features/Features.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RetryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RetryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/broker/BrokerCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/broker/BrokerCluster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,22 +81,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateBuilderDialog.RecentsKey">
       <recent name="org.example.configure" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="ListenerInvoker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.org.example.Main">
+    <configuration name="org.example.ListenerInvoker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.ListenerInvoker" />
       <module name="PayloadMQ" />
       <extension name="coverage">
@@ -100,7 +110,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="org.example.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="PayloadMQ" />
       <extension name="coverage">
@@ -115,9 +125,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.ListenerInvoker" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.org.example.Main" />
+        <item itemvalue="Application.org.example.ListenerInvoker" />
+        <item itemvalue="Application.org.example.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -131,6 +141,7 @@
       <updated>1660935383845</updated>
       <workItem from="1660935385316" duration="11788000" />
       <workItem from="1660998656595" duration="1368000" />
+      <workItem from="1661016904709" duration="1944000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1660943349583</created>
@@ -174,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661000240715</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lock">
+      <created>1661017091960</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661017091960</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +215,18 @@
     <MESSAGE value="message data store system design" />
     <MESSAGE value="retry pattern added" />
     <MESSAGE value="PayloadListener annotation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="PayloadListener annotation added" />
+    <MESSAGE value="lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="lock" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/MessageStoreExecution.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
