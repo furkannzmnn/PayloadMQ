@@ -9,6 +9,8 @@ import org.example.data.Payload;
 import java.util.concurrent.CompletableFuture;
 
 public final class MessageExecution {
+    private MessageExecution() {}
+
     public static final BrokerCluster BROKER_CLUSTER = new Listener();
 
     public static void send(Payload payload) {

@@ -5,6 +5,8 @@ import org.example.consumer.Listener;
 import org.example.data.Payload;
 import org.example.producer.PayloadSender;
 
+import java.util.concurrent.CompletableFuture;
+
 import static org.example.producer.MessageExecution.BROKER_CLUSTER;
 
 public class Main {
@@ -17,6 +19,11 @@ public class Main {
         String basicJson = "{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}";
         Payload payload = new Payload(basicJson, "ops", new Main().getMethod());
 
+        CompletableFuture.runAsync(() -> new ScheduleMessageStore().scheduleStore());
+        execute(payload);
+    }
+
+    private static void execute(Payload payload) {
         PayloadSender sender = new PayloadSender();
         sender.sendAsync(payload.getTopic(), payload.getPayload(), payload.getMethod())
                 .handle((result, ex) -> {
