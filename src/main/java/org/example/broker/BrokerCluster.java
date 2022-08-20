@@ -8,9 +8,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 
 public class BrokerCluster {
-
     protected final BlockingQueue<String> queue;
     protected final Queue<String> registerMethods;
+
 
     public BrokerCluster() {
         this.registerMethods = new ConcurrentLinkedQueue<>();
@@ -24,5 +24,9 @@ public class BrokerCluster {
 
     public String receive() {
         return this.queue.poll();
+    }
+
+    public void handleMethod() {
+         this.registerMethods.poll();
     }
 }
