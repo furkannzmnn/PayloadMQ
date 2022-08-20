@@ -13,13 +13,12 @@ public final class PayloadSender {
         LOGGER.info("-------------------------------------------------------");
         LOGGER.info("START API CALL");
         final Payload meta = new Payload(message, topic);
-        if (! JsonUtil.isValidJson(meta.getPayload())) {
+        if (!JsonUtil.isValidJson(meta.getPayload())) {
              new CompletableFuture<>().completeExceptionally(new RuntimeException("invalid json"));
         }
 
         return CompletableFuture.runAsync(() -> send(meta));
     }
-
 
     private void send(Payload meta) {
         MessageExecution.send(meta);
