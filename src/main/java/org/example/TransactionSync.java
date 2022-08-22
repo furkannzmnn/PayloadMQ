@@ -7,26 +7,31 @@ import org.example.producer.MessageExecution;
 
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public final class TransactionSync<T> {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+
     public void send(Runnable runnable, Transaction<T> transaction) {
 
         try {
-            runnable.run();
-        }catch (RuntimeException e) {
-            BeginTransaction<T> tBeginTransaction = new BeginTransaction<>();
-            final Transaction<T> beginTransaction = tBeginTransaction.beginTransaction(transaction);
-            executorService.submit(() ->
-                    new BeginTransactionStarter<>(executorService, tBeginTransaction).start((Payload) beginTransaction.data()));
+            CompletableFuture.runAsync(runnable).join();
+            throw new RuntimeException("tr");
+        } catch (RuntimeException e) {
+            Loggers.trace(() -> "transaction called");
+            BeginTransaction<T> tBeginTransaction = new BeginTransaction<>(transaction);
+            final Transaction<?> beginTransaction = tBeginTransaction.beginTransaction();
+
+            new BeginTransactionStarter<>(executorService).start((Payload) beginTransaction.data());
         }
     }
 
-    private record BeginTransactionStarter<T>(ExecutorService executorService, BeginTransaction<T> transaction) {
+    private record BeginTransactionStarter<T>(ExecutorService executorService) {
         public void start(Payload payload) {
+            executorService.submit(() -> {
                 final BrokerCluster cluster = MessageExecution.BROKER_CLUSTER;
                 final Map<String, BlockingQueue<String>> queueMap = cluster.getTopicQueues();
                 if (queueMap.containsKey(payload.getTopic())) {
@@ -36,6 +41,7 @@ public final class TransactionSync<T> {
                         try {
                             final Payload var1 = mapper.readValue(s, Payload.class);
                             if (var1.getId().equals(payload.getId())) {
+                                Loggers.trace(() -> toString() + "message deleted, transaction success"+ var1.getId());
                                 blockingQueue.poll();
                             }
                         } catch (Exception e) {
@@ -45,8 +51,9 @@ public final class TransactionSync<T> {
 
                     }
                 }
-            }
-
-
+            });
         }
+
+
+    }
 }

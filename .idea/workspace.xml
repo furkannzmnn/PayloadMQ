@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="LOGGER SUPPORT">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AsyncProcessExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BeginTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TransactionSync.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/properties.yml" afterDir="false" />
+    <list default="true" id="aa5719e5-d3e6-4c60-9883-ae93b06c7bde" name="Changes" comment="transaction support design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ListenerInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ListenerInvoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Loggers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Loggers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ScheduleMessageStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/broker/BrokerCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/broker/BrokerCluster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BeginTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BeginTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransactionSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TransactionSync.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/consumer/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/producer/MessageExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/producer/MessageExecution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/producer/PayloadSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/producer/PayloadSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +141,7 @@
       <workItem from="1660935385316" duration="11788000" />
       <workItem from="1660998656595" duration="1368000" />
       <workItem from="1661016904709" duration="5629000" />
-      <workItem from="1661195754052" duration="5757000" />
+      <workItem from="1661195754052" duration="8322000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1660943349583</created>
@@ -219,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661022737722</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="transaction support design">
+      <created>1661201679605</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661201679605</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +246,8 @@
     <MESSAGE value="lock" />
     <MESSAGE value="toic and payload seperation" />
     <MESSAGE value="LOGGER SUPPORT" />
-    <option name="LAST_COMMIT_MESSAGE" value="LOGGER SUPPORT" />
+    <MESSAGE value="transaction support design" />
+    <option name="LAST_COMMIT_MESSAGE" value="transaction support design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -254,6 +256,26 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>43</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/TransactionSync.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/TransactionSync.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/TransactionSync.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

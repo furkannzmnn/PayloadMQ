@@ -9,11 +9,18 @@ public final class BeginTransaction<T> {
 
     private static final String TRANSACTION_KEY = "transaction";
 
+    private Transaction<T> tTransaction;
+
     // TODO: PERSİSTENCE CONTEXT ARAŞTIR
 
     private final Map<String, Transaction<T>> persistenceContext = new LinkedHashMap<>();
 
-    public Transaction<T> beginTransaction(Transaction<T> transaction) {
-        return persistenceContext.put(TRANSACTION_KEY, transaction);
+    public BeginTransaction(Transaction<T> tTransaction) {
+        this.tTransaction = tTransaction;
+    }
+
+    public Transaction<?> beginTransaction() {
+         persistenceContext.put(TRANSACTION_KEY, tTransaction);
+         return persistenceContext.get(TRANSACTION_KEY);
     }
 }

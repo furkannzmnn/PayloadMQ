@@ -12,6 +12,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
@@ -29,8 +30,10 @@ public final class PayloadSender {
         }
         Yaml yaml = new Yaml();
         Map<String, Object> data = yaml.load(inputStream);
-        final String value = data.get("transaction").toString();
-        transaction = Boolean.parseBoolean(value);
+        Map<String, Object> var20 = (Map<String, Object>) data.get("kafka");
+        List<String> var40  = (List<String>) var20.get("transaction");
+        transaction = Boolean.parseBoolean(var40.iterator().next());
+        Loggers.trace(() -> "yml resolved");
     }
 
     public CompletableFuture<Void> sendAsync(String topic, String message) {

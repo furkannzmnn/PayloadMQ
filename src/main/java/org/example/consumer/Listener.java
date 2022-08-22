@@ -12,7 +12,7 @@ public class Listener extends BrokerCluster {
     private final MessageStoreExecution dataStore = new MessageStoreExecution();
 
     public void listen() {
-        for (;;)
+        while (true)
             while (this.topicQueues.size() > 0) {
                 String message = receive();
                 completeEvent(message);
@@ -28,7 +28,7 @@ public class Listener extends BrokerCluster {
                             Loggers.trace( () -> ( this.getClass().getName() + "----" + e.getMessage()));
                         }
                     });
-            Loggers.trace( () -> (message + ",Message received: {}"));
+            Loggers.trace( () -> ("listener invoked, message received"));
         }
     }
 }
