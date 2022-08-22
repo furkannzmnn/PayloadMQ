@@ -12,7 +12,7 @@ public final class ScheduleMessageStore {
     public void scheduleStore() {
         try {
             executor.scheduleAtFixedRate(() -> MessageStoreExecution.messageDataStores.stream()
-                    .filter(db -> db.messageHandleTime().isBefore(LocalDateTime.now().minusSeconds(1)))
+                    .filter(db -> db.messageHandleTime().isBefore(LocalDateTime.now().minusSeconds(14)))
                     .map(MessageStoreExecution.messageDataStores::remove)
                     .forEach(db -> System.out.println("Message Store deleted")), 0, 1, java.util.concurrent.TimeUnit.SECONDS);
         }catch (Exception e) {

@@ -1,13 +1,10 @@
 package org.example.broker;
 
-import org.example.Loggers;
 import org.example.data.Payload;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Queue;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -42,4 +39,7 @@ public class BrokerCluster {
         return null;
     }
 
+    public Map<String, BlockingQueue<String>> getTopicQueues() {
+        return topicQueues;
+    }
 }

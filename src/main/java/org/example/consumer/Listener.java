@@ -7,31 +7,28 @@ import org.example.broker.BrokerCluster;
 import org.example.data.Payload;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.logging.Level;
 
 public class Listener extends BrokerCluster {
     private final MessageStoreExecution dataStore = new MessageStoreExecution();
 
     public void listen() {
-        while (true) {
+        for (;;)
             while (this.topicQueues.size() > 0) {
                 String message = receive();
-                // invoke method
-                if (message != null) {
-                    ListenerInvoker.invoke(message);
-                    CompletableFuture.runAsync(() -> dataStore.storeData(new Payload(message, "topic")))
-                            .whenCompleteAsync((v, e) -> {
-                                if (e != null) {
-                                    logger( this.getClass().getName(), e.getMessage());
-                                }
-                            });
-                    logger(message,"Message received: {}");
-                }
+                completeEvent(message);
             }
-        }
     }
 
-    private void logger(String message, String text) {
-        Loggers.log(Level.INFO, text, message);
+    private void completeEvent(String message) {
+        if (message != null) {
+            ListenerInvoker.invoke(message);
+            CompletableFuture.runAsync(() -> dataStore.storeData(new Payload(message, "topic")))
+                    .whenCompleteAsync((v, e) -> {
+                        if (e != null) {
+                            Loggers.trace( () -> ( this.getClass().getName() + "----" + e.getMessage()));
+                        }
+                    });
+            Loggers.trace( () -> (message + ",Message received: {}"));
+        }
     }
 }
